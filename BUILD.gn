@@ -19,7 +19,7 @@ config("zlib_internal_config") {
 use_arm_neon_optimizations = false
 if (current_cpu == "arm" || current_cpu == "arm64") {
   if (arm_use_neon) {
-    use_arm_neon_optimizations = true
+    use_arm_neon_optimizations = !is_mac
   }
 }
 
